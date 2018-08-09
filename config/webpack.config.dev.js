@@ -199,16 +199,20 @@ module.exports = {
           // This loader doesn't use a "test" so it will catch all modules
           // that fall through the other loaders.
           {
+            loader: require.resolve('file-loader'),
             // Exclude `js` files to keep "css" loader working as it injects
-            // its runtime that would otherwise processed through "file" loader.
+            // it's runtime that would otherwise processed through "file" loader.
             // Also exclude `html` and `json` extensions so they get processed
             // by webpacks internal loaders.
-            exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/],
-            loader: require.resolve('file-loader'),
+            exclude: [/\.js$/, /\.html$/, /\.json$/,/\.scss$/],
             options: {
-              name: 'static/media/[name].[hash:8].[ext]',
+                name: 'static/media/[name].[hash:8].[ext]',
             },
-          },
+        },
+        {
+            test: /\.scss$/,
+            loaders: ['style-loader', 'css-loader', 'sass-loader'],
+        }
         ],
       },
       // ** STOP ** Are you adding a new loader?

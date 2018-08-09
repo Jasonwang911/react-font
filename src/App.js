@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import Text from '@/view/text'
+import { Provider } from 'mobx-react';
+import Routers from '@/router';
+import commonState from './store/common';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        我是首页
-        <Text />
-      </div>
+      <Provider commonState={commonState}>
+          <Routers />
+      </Provider>
     );
   }
 }

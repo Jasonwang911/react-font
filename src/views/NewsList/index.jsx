@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class Text extends Component {
+class NewsList extends Component {
   render() {
     return (
       <div>
-        我是测试的组件
+         <h2>资讯列表页面</h2>
       </div>
     );
   }
 }
 
-export default Text;
+export default NewsList;

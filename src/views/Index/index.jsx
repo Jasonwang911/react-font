@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FootNav from '@/components/FootNav'
+
 import { inject, observer } from 'mobx-react';
 
 
@@ -15,7 +15,7 @@ class Index extends Component {
       <div>
          <div>我是首页</div>
          <div>{this.props.commonState.getUserNameFromStore}</div>
-         <FootNav />
+         
       </div>
     );
   }

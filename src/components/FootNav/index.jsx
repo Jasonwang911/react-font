@@ -6,17 +6,17 @@ class FootNav extends Component {
   render() {
     return (
       <div className="foot-nav">
-        <NavLink to="/"  className="index">
-          <div></div>
+        <NavLink exact to="/"  className="index">
+          <div className="index-bg"></div>
           <p>首页</p>
         </NavLink>
         <NavLink to="/newsList"  className="news-list">
-          <div></div>
+          <div className="news-list-bg"></div>
           <p>资讯</p>
         </NavLink>
         <NavLink to="/mine" className="mine">
-          <div></div>
-          <p>首页</p>
+          <div className="mine-bg"></div>
+          <p>我的</p>
         </NavLink>
       </div>
     );
